@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Home, Info, Book, MessageCircle, Mail, PhoneCall } from "lucide-react";
+import { Home, Info, Book, MessageSquare, Mail, PhoneCall } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,17 +28,17 @@ const Navbar = () => {
               <Info size={18} />
               <span>About</span>
             </Link>
+            <Link to="/contact" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300 hover:scale-105">
+              <Mail size={18} />
+              <span>Contact</span>
+            </Link>
             <a href="#programs" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300 hover:scale-105">
               <Book size={18} />
               <span>Programs</span>
             </a>
             <a href="#edusaathi" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300 hover:scale-105">
-              <MessageCircle size={18} />
+              <MessageSquare size={18} />
               <span>EduSaathi</span>
-            </a>
-            <a href="#contact" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300 hover:scale-105">
-              <Mail size={18} />
-              <span>Contact Us</span>
             </a>
 
             <div className="flex gap-4">
@@ -80,17 +80,17 @@ const Navbar = () => {
               <Info size={18} />
               <span>About</span>
             </Link>
-            <a href="#programs" className="flex items-center gap-2 text-trust-blue hover:text-bright-yellow transition-all duration-300">
+            <Link to="/contact" className="flex items-center gap-2 text-trust-blue hover:text-bright-yellow transition-all duration-300">
+              <Mail size={18} />
+              <span>Contact</span>
+            </Link>
+            <a href="#programs" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300 hover:scale-105">
               <Book size={18} />
               <span>Programs</span>
             </a>
-            <a href="#edusaathi" className="flex items-center gap-2 text-trust-blue hover:text-bright-yellow transition-all duration-300">
-              <MessageCircle size={18} />
+            <a href="#edusaathi" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300 hover:scale-105">
+              <MessageSquare size={18} />
               <span>EduSaathi</span>
-            </a>
-            <a href="#contact" className="flex items-center gap-2 text-trust-blue hover:text-bright-yellow transition-all duration-300">
-              <Mail size={18} />
-              <span>Contact Us</span>
             </a>
             <Button className="bg-bright-yellow hover:bg-amber-400 text-trust-blue font-semibold w-full">
               Start Learning
