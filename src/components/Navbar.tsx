@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -28,10 +29,6 @@ const Navbar = () => {
               <Info size={18} />
               <span>About</span>
             </Link>
-            <Link to="/contact" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300 hover:scale-105">
-              <Mail size={18} />
-              <span>Contact</span>
-            </Link>
             <a href="#programs" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300 hover:scale-105">
               <Book size={18} />
               <span>Programs</span>
@@ -40,6 +37,10 @@ const Navbar = () => {
               <MessageSquare size={18} />
               <span>EduSaathi</span>
             </a>
+            <Link to="/contact" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300 hover:scale-105">
+              <Mail size={18} />
+              <span>Contact</span>
+            </Link>
 
             <div className="flex gap-4">
               <Button className="bg-bright-yellow hover:bg-amber-400 text-trust-blue font-semibold transition-all duration-300 hover:scale-105">
@@ -80,10 +81,6 @@ const Navbar = () => {
               <Info size={18} />
               <span>About</span>
             </Link>
-            <Link to="/contact" className="flex items-center gap-2 text-trust-blue hover:text-bright-yellow transition-all duration-300">
-              <Mail size={18} />
-              <span>Contact</span>
-            </Link>
             <a href="#programs" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300 hover:scale-105">
               <Book size={18} />
               <span>Programs</span>
@@ -92,6 +89,10 @@ const Navbar = () => {
               <MessageSquare size={18} />
               <span>EduSaathi</span>
             </a>
+            <Link to="/contact" className="flex items-center gap-2 text-trust-blue hover:text-bright-yellow transition-all duration-300">
+              <Mail size={18} />
+              <span>Contact</span>
+            </Link>
             <Button className="bg-bright-yellow hover:bg-amber-400 text-trust-blue font-semibold w-full">
               Start Learning
             </Button>

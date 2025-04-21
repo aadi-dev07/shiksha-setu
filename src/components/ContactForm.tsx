@@ -10,7 +10,7 @@ import { Mail } from "lucide-react";
 
 type FormData = {
   name: string;
-  email: string;
+  mobile: string;
   message: string;
 };
 
@@ -41,15 +41,21 @@ const ContactForm = () => {
             </div>
             
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                Email Address
+              <label htmlFor="mobile" className="block text-sm font-medium text-gray-700 mb-1">
+                Mobile Number
               </label>
               <Input
-                id="email"
-                type="email"
-                {...register("email", { required: true })}
+                id="mobile"
+                type="tel"
+                {...register("mobile", { 
+                  required: true,
+                  pattern: {
+                    value: /^[6-9]\d{9}$/,
+                    message: "Please enter a valid 10-digit mobile number"
+                  } 
+                })}
                 className="w-full transition-all duration-300 focus:ring-2 focus:ring-bright-yellow"
-                placeholder="Enter your email"
+                placeholder="Enter your mobile number"
               />
             </div>
             
