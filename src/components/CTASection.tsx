@@ -14,10 +14,10 @@ const CTASection = () => {
             Join thousands of students across rural India who are transforming their future through education in their native language.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-bright-yellow hover:bg-amber-400 text-trust-blue font-semibold px-8 py-6 text-lg">
+            <Button className="bg-bright-yellow hover:bg-amber-400 text-trust-blue font-semibold px-8 py-6 text-lg hover:scale-105 transition-all duration-300">
               Start Learning Now
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-trust-blue font-semibold px-8 py-6 text-lg">
+            <Button className="bg-white hover:bg-gray-100 text-trust-blue font-semibold px-8 py-6 text-lg hover:scale-105 transition-all duration-300 border-2 border-bright-yellow">
               Join Beta Program
             </Button>
           </div>

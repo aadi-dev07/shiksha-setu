@@ -9,11 +9,11 @@ const HeroSection = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4 text-trust-blue overflow-hidden">
-              <span className="block text-reveal">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-trust-blue">
+              <span className="block text-reveal bg-gradient-to-r from-trust-blue to-bright-yellow bg-clip-text text-transparent">
                 हर गांव तक शिक्षा,
               </span>
-              <span className="block text-reveal text-reveal-delay-100">
+              <span className="block text-reveal text-reveal-delay-100 bg-gradient-to-r from-trust-blue to-bright-yellow bg-clip-text text-transparent">
                 हर जुबान में सीखने का हक
               </span>
             </h1>
@@ -50,8 +50,8 @@ const HeroSection = () => {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
                   <img 
-                    src="photo-1503676260728-1c00da094a0b" 
-                    alt="Rural students learning together" 
+                    src="/lovable-uploads/0359d660-1975-4f06-87d1-596aa80dc4a9.png" 
+                    alt="Happy students from government schools" 
                     className="w-full h-full object-cover"
                   />
                 </div>

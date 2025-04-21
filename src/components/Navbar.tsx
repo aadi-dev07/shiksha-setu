@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Book, Home, Info, MessageCircle, Mail, PhoneCall } from "lucide-react";
+import { Home, Info, Book, MessageCircle, Mail, PhoneCall } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,6 +39,7 @@ const Navbar = () => {
               <Mail size={18} />
               <span>Contact Us</span>
             </a>
+
             <div className="flex gap-4">
               <Button className="bg-bright-yellow hover:bg-amber-400 text-trust-blue font-semibold transition-all duration-300 hover:scale-105">
                 Start Learning
