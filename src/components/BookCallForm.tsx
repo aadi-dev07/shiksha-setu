@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -53,7 +52,7 @@ const BookCallForm = () => {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-br from-[#E5DEFF] to-white">
+    <section id="book-call" className="py-16 bg-gradient-to-br from-[#E5DEFF] to-white">
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-trust-blue mb-4">

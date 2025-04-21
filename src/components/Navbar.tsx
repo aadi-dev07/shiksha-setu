@@ -45,9 +45,15 @@ const Navbar = () => {
               <Button asChild className="bg-bright-yellow hover:bg-amber-400 text-trust-blue font-semibold transition-all duration-300 hover:scale-105">
                 <Link to="/login">Start Learning</Link>
               </Button>
-              <Button variant="outline" className="border-trust-blue text-trust-blue hover:bg-trust-blue hover:text-white transition-all duration-300 hover:scale-105">
-                <PhoneCall className="mr-2 h-4 w-4" />
-                Book a Call
+              <Button 
+                variant="outline" 
+                asChild
+                className="border-trust-blue text-trust-blue hover:bg-trust-blue hover:text-white transition-all duration-300 hover:scale-105"
+              >
+                <Link to="/#book-call">
+                  <PhoneCall className="mr-2 h-4 w-4" />
+                  Book a Call
+                </Link>
               </Button>
             </div>
           </div>
@@ -95,9 +101,15 @@ const Navbar = () => {
             <Button asChild className="bg-bright-yellow hover:bg-amber-400 text-trust-blue font-semibold w-full">
               <Link to="/login">Start Learning</Link>
             </Button>
-            <Button variant="outline" className="border-trust-blue text-trust-blue hover:bg-trust-blue hover:text-white w-full">
-              <PhoneCall className="mr-2 h-4 w-4" />
-              Book a Call
+            <Button 
+              variant="outline" 
+              asChild
+              className="border-trust-blue text-trust-blue hover:bg-trust-blue hover:text-white w-full"
+            >
+              <Link to="/#book-call">
+                <PhoneCall className="mr-2 h-4 w-4" />
+                Book a Call
+              </Link>
             </Button>
           </div>
         )}
