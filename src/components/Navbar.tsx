@@ -50,7 +50,7 @@ const Navbar = () => {
                 asChild
                 className="border-trust-blue text-trust-blue hover:bg-trust-blue hover:text-white transition-all duration-300 hover:scale-105"
               >
-                <Link to="/#book-call">
+                <Link to="/book-call">
                   <PhoneCall className="mr-2 h-4 w-4" />
                   Book a Call
                 </Link>
@@ -106,7 +106,7 @@ const Navbar = () => {
               asChild
               className="border-trust-blue text-trust-blue hover:bg-trust-blue hover:text-white w-full"
             >
-              <Link to="/#book-call">
+              <Link to="/book-call">
                 <PhoneCall className="mr-2 h-4 w-4" />
                 Book a Call
               </Link>
