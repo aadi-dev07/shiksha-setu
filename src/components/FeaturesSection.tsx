@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Book, Award, Gift, School, Star, Play, CreditCard } from "lucide-react";
+import { Book, Award, Gift, School, Star, Play, CreditCard, MessageCircle } from "lucide-react";
 
 const FeatureCard = ({ 
   icon: Icon, 
