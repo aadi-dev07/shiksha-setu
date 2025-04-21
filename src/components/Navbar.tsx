@@ -29,10 +29,10 @@ const Navbar = () => {
               <Info size={18} />
               <span>About</span>
             </Link>
-            <a href="#programs" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300 hover:scale-105">
+            <Link to="/programs" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300 hover:scale-105">
               <Book size={18} />
               <span>Programs</span>
-            </a>
+            </Link>
             <a href="#edusaathi" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300 hover:scale-105">
               <MessageSquare size={18} />
               <span>EduSaathi</span>
@@ -81,10 +81,10 @@ const Navbar = () => {
               <Info size={18} />
               <span>About</span>
             </Link>
-            <a href="#programs" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300 hover:scale-105">
+            <Link to="/programs" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300 hover:scale-105">
               <Book size={18} />
               <span>Programs</span>
-            </a>
+            </Link>
             <a href="#edusaathi" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300 hover:scale-105">
               <MessageSquare size={18} />
               <span>EduSaathi</span>
