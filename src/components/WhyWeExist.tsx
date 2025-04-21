@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import { Wifi, Book, Language } from "lucide-react";
+import { Wifi, Book, Globe } from "lucide-react";
 
 const challenges = [
   {
@@ -15,7 +15,7 @@ const challenges = [
     description: "Our platform offers comprehensive study materials curated by expert educators.",
   },
   {
-    icon: Language,
+    icon: Globe,
     title: "Language Barriers",
     description: "Learn in your preferred regional language, making education truly accessible.",
   },
