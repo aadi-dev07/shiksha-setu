@@ -82,21 +82,22 @@ const FeaturesSection = () => {
     <section id="about" className="py-16 bg-off-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-trust-blue mb-4">Empowering Features</h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            ShikshaSetu brings education to every corner of India with these powerful features designed for accessibility and engagement.
+          <h2 className="text-3xl md:text-4xl font-bold text-trust-blue mb-4 animate-fade-up opacity-0">Empowering Features</h2>
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto animate-fade-up opacity-0 animation-delay-100">
+            ShikshaSetuvah brings education to every corner of India with these powerful features designed for accessibility and engagement.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <FeatureCard
-              key={index}
-              icon={feature.icon}
-              title={feature.title}
-              description={feature.description}
-              color={feature.color}
-            />
+            <div key={index} className={`animate-fade-up opacity-0 animation-delay-${(index + 2) * 100}`}>
+              <FeatureCard
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+                color={feature.color}
+              />
+            </div>
           ))}
         </div>
       </div>

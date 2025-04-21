@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { PhoneCall } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -17,14 +18,15 @@ const HeroSection = () => {
               </span>
             </h1>
             <p className="text-lg mb-8 text-gray-700 animate-fade-up opacity-0 animation-delay-200">
-              Empowering rural India through accessible, multilingual education in regional languages. Learn at your own pace, earn rewards, and build your future.
+              Empowering rural India through accessible, multilingual education in regional languages. Learn at your own pace, earn rewards, and build your future with ShikshaSetuvah.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-up opacity-0 animation-delay-300">
-              <Button className="bg-bright-yellow hover:bg-amber-400 text-trust-blue font-semibold px-6 py-6 text-lg">
+              <Button className="bg-bright-yellow hover:bg-amber-400 text-trust-blue font-semibold px-6 py-6 text-lg hover:scale-105 transition-all duration-300">
                 Start Learning Now
               </Button>
-              <Button variant="outline" className="border-trust-blue text-trust-blue hover:bg-trust-blue hover:text-white font-semibold px-6 py-6 text-lg">
-                Join Beta Program
+              <Button variant="outline" className="border-trust-blue text-trust-blue hover:bg-trust-blue hover:text-white font-semibold px-6 py-6 text-lg hover:scale-105 transition-all duration-300">
+                <PhoneCall className="mr-2 h-5 w-5" />
+                Book a Call
               </Button>
             </div>
             <div className="mt-10 grid grid-cols-3 gap-4 animate-fade-up opacity-0 animation-delay-400">
@@ -43,21 +45,21 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="order-1 md:order-2 relative">
-            <div className="relative h-64 md:h-96 w-full rounded-xl overflow-hidden shadow-2xl animate-float">
+            <div className="relative h-64 md:h-96 w-full rounded-xl overflow-hidden shadow-2xl animate-float hover:scale-105 transition-all duration-300">
               <div className="absolute inset-0 bg-trust-blue opacity-20 rounded-xl"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
                   <img 
-                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1322&q=80" 
-                    alt="Rural students learning" 
+                    src="photo-1503676260728-1c00da094a0b" 
+                    alt="Rural students learning together" 
                     className="w-full h-full object-cover"
                   />
                 </div>
               </div>
             </div>
-            <div className="absolute -bottom-6 -right-6 bg-bright-yellow rounded-lg p-4 shadow-lg">
+            <div className="absolute -bottom-6 -right-6 bg-bright-yellow rounded-lg p-4 shadow-lg animate-fade-up opacity-0 animation-delay-500">
               <p className="text-trust-blue font-bold text-lg">
-                Unlock your potential in your own language
+                Unlock your potential in your own language with ShikshaSetuvah
               </p>
             </div>
           </div>
