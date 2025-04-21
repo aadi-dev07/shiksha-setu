@@ -34,7 +34,7 @@ const HowItWorks = () => {
     <section id="courses" className="py-16 bg-trust-blue text-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">How ShikshaSetu Works</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">How ShikshaSetuvah Works</h2>
           <p className="text-lg max-w-3xl mx-auto">
             Our simple 4-step learning journey makes education accessible to everyone, regardless of location or language.
           </p>
