@@ -1,5 +1,6 @@
 import React from 'react';
 import { Book, Home, Info, MessageCircle, Mail } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -110,7 +111,7 @@ const Footer = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                 </svg>
                 <span className="text-gray-400">
-                  ShikshaSetu Office, <br />
+                  ShikshaSetuvah Office, <br />
                   Innovation Hub, <br />
                   New Delhi, India
                 </span>

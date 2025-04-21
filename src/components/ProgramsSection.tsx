@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -76,8 +76,11 @@ const ProgramsSection = () => {
             </CardContent>
             <CardFooter className="flex flex-col pt-0">
               <p className="text-trust-blue font-bold mb-4">Affordable</p>
-              <Button className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-0 transition-all duration-300">
-                Enroll Now
+              <Button 
+                asChild 
+                className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-0 transition-all duration-300"
+              >
+                <Link to="/login">Enroll Now</Link>
               </Button>
             </CardFooter>
           </Card>
@@ -141,8 +144,11 @@ const ProgramsSection = () => {
             </CardContent>
             <CardFooter className="flex flex-col pt-0">
               <p className="text-trust-blue font-bold mb-4">Affordable</p>
-              <Button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white border-0 transition-all duration-300">
-                Enroll Now
+              <Button 
+                asChild 
+                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white border-0 transition-all duration-300"
+              >
+                <Link to="/login">Enroll Now</Link>
               </Button>
             </CardFooter>
           </Card>
@@ -206,8 +212,11 @@ const ProgramsSection = () => {
             </CardContent>
             <CardFooter className="flex flex-col pt-0">
               <p className="text-trust-blue font-bold mb-4">Best Value</p>
-              <Button className="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white border-0 transition-all duration-300">
-                Enroll Now
+              <Button 
+                asChild 
+                className="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white border-0 transition-all duration-300"
+              >
+                <Link to="/login">Enroll Now</Link>
               </Button>
             </CardFooter>
           </Card>
