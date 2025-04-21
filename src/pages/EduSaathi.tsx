@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mic, Translate, Bot, MessageSquare } from "lucide-react";
+import { Mic, Globe, Bot, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 
@@ -86,7 +86,7 @@ const EduSaathi = () => {
             <Card className="border-none hover:shadow-xl transition-all duration-300 hover:scale-105 bg-gradient-to-br from-[#E5DEFF] to-white overflow-hidden">
               <CardContent className="p-8">
                 <div className="w-16 h-16 bg-[#7E69AB] rounded-2xl flex items-center justify-center mb-6 -rotate-3 shadow-lg">
-                  <Translate size={32} className="text-white" />
+                  <Globe size={32} className="text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-trust-blue mb-3">
                   Multilingual Doubt Solving
@@ -209,7 +209,7 @@ const EduSaathi = () => {
                   <HoverCard>
                     <HoverCardTrigger>
                       <Button variant="outline" size="sm" className="bg-white">
-                        <Translate size={16} className="mr-1" /> Languages
+                        <Globe size={16} className="mr-1" /> Languages
                       </Button>
                     </HoverCardTrigger>
                     <HoverCardContent>

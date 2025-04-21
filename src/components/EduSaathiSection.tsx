@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Globe } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const EduSaathiSection = () => {
   return (
@@ -36,8 +37,8 @@ const EduSaathiSection = () => {
               </div>
 
               <div className="text-center">
-                <Button className="bg-trust-blue hover:bg-blue-900 text-white">
-                  Try EduSaathi Now
+                <Button className="bg-trust-blue hover:bg-blue-900 text-white" asChild>
+                  <Link to="/edusaathi">Try EduSaathi Now</Link>
                 </Button>
               </div>
             </div>
