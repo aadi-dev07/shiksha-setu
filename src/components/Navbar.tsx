@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Home, Info, Book, MessageCircle, Mail, PhoneCall } from "lucide-react";
 
@@ -10,23 +11,23 @@ const Navbar = () => {
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
+          <Link to="/" className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
             <div className="bg-trust-blue rounded-md p-1">
               <span className="text-white font-bold text-xl">S</span>
             </div>
             <span className="font-bold text-trust-blue text-xl">ShikshaSetuvah</span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300 hover:scale-105">
+            <Link to="/" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300 hover:scale-105">
               <Home size={18} />
               <span>Home</span>
-            </a>
-            <a href="#about" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300 hover:scale-105">
+            </Link>
+            <Link to="/about" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300 hover:scale-105">
               <Info size={18} />
               <span>About</span>
-            </a>
+            </Link>
             <a href="#programs" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300 hover:scale-105">
               <Book size={18} />
               <span>Programs</span>
@@ -71,14 +72,14 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 py-4 space-y-4 flex flex-col">
-            <a href="#" className="flex items-center gap-2 text-trust-blue hover:text-bright-yellow transition-all duration-300">
+            <Link to="/" className="flex items-center gap-2 text-trust-blue hover:text-bright-yellow transition-all duration-300">
               <Home size={18} />
               <span>Home</span>
-            </a>
-            <a href="#about" className="flex items-center gap-2 text-trust-blue hover:text-bright-yellow transition-all duration-300">
+            </Link>
+            <Link to="/about" className="flex items-center gap-2 text-trust-blue hover:text-bright-yellow transition-all duration-300">
               <Info size={18} />
               <span>About</span>
-            </a>
+            </Link>
             <a href="#programs" className="flex items-center gap-2 text-trust-blue hover:text-bright-yellow transition-all duration-300">
               <Book size={18} />
               <span>Programs</span>
