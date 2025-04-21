@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -21,7 +20,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300 hover:scale-105">
+            <Link to="/" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300">
               <Home size={18} />
               <span>Home</span>
             </Link>
@@ -43,8 +42,8 @@ const Navbar = () => {
             </Link>
 
             <div className="flex gap-4">
-              <Button className="bg-bright-yellow hover:bg-amber-400 text-trust-blue font-semibold transition-all duration-300 hover:scale-105">
-                Start Learning
+              <Button asChild className="bg-bright-yellow hover:bg-amber-400 text-trust-blue font-semibold transition-all duration-300 hover:scale-105">
+                <Link to="/login">Start Learning</Link>
               </Button>
               <Button variant="outline" className="border-trust-blue text-trust-blue hover:bg-trust-blue hover:text-white transition-all duration-300 hover:scale-105">
                 <PhoneCall className="mr-2 h-4 w-4" />
@@ -93,8 +92,8 @@ const Navbar = () => {
               <Mail size={18} />
               <span>Contact</span>
             </Link>
-            <Button className="bg-bright-yellow hover:bg-amber-400 text-trust-blue font-semibold w-full">
-              Start Learning
+            <Button asChild className="bg-bright-yellow hover:bg-amber-400 text-trust-blue font-semibold w-full">
+              <Link to="/login">Start Learning</Link>
             </Button>
             <Button variant="outline" className="border-trust-blue text-trust-blue hover:bg-trust-blue hover:text-white w-full">
               <PhoneCall className="mr-2 h-4 w-4" />
