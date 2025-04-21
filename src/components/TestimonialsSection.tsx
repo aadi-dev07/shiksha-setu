@@ -6,23 +6,23 @@ const TestimonialsSection = () => {
     {
       name: "Priya Sharma",
       location: "Rajasthan",
-      image: "https://randomuser.me/api/portraits/women/65.jpg",
-      text: "ShikshaSetu में हिंदी में पढ़ाई करना मेरे लिए बहुत आसान हो गया है। अब मैं अपनी पढ़ाई में आत्मविश्वास महसूस करती हूं।",
-      translation: "Studying in Hindi on ShikshaSetu has become very easy for me. Now I feel confident in my studies."
+      image: "/lovable-uploads/0359d660-1975-4f06-87d1-596aa80dc4a9.png",
+      text: "ShikshaSetuvah में हिंदी में पढ़ाई करना मेरे लिए बहुत आसान हो गया है। अब मैं अपनी पढ़ाई में आत्मविश्वास महसूस करती हूं।",
+      translation: "Studying in Hindi on ShikshaSetuvah has become very easy for me. Now I feel confident in my studies."
     },
     {
       name: "Rahul Patel",
       location: "Gujarat",
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
-      text: "ગુજરાતી ભાષામાં વિડિઓ જોવાથી મને વિજ્ઞાન સમજવામાં ખૂબ મદદ મળી. EduSaathi સાથે મારા પ્રશ્નોના જવાબ મેળવવા સરળ છે.",
-      translation: "Watching videos in Gujarati has helped me understand science better. It's easy to get my questions answered with EduSaathi."
+      image: "/lovable-uploads/0359d660-1975-4f06-87d1-596aa80dc4a9.png",
+      text: "ગુજરાતી ભાષામાં વિડિઓ જોવાથી મને વિજ્ઞાન સમજવામાં ખૂબ મદદ મળી. ShikshaSetuvah સાથે મારા પ્રશ્નોના જવાબ મેળવવા સરળ છે.",
+      translation: "Watching videos in Gujarati has helped me understand science better. It's easy to get my questions answered with ShikshaSetuvah."
     },
     {
       name: "Karthik Raja",
       location: "Tamil Nadu",
-      image: "https://randomuser.me/api/portraits/men/67.jpg",
-      text: "என் கிராமத்தில் இணைய இணைப்பு மோசமாக இருந்தாலும், ShikshaSetu ஆஃப்லைன் வசதியுடன் எனக்கு உதவுகிறது.",
-      translation: "Even with poor internet in my village, ShikshaSetu helps me with offline features."
+      image: "/lovable-uploads/0359d660-1975-4f06-87d1-596aa80dc4a9.png",
+      text: "என் கிராமத்தில் இணைய இணைப்பு மோசமாக இருந்தாலும், ShikshaSetuvah ஆஃப்லைன் வசதியுடன் எனக்கு உதவுகிறது.",
+      translation: "Even with poor internet in my village, ShikshaSetuvah helps me with offline features."
     }
   ];
 
@@ -32,7 +32,7 @@ const TestimonialsSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-trust-blue mb-4">Student Voices</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Hear from students across India who are transforming their education journey with ShikshaSetu.
+            Hear from students across India who are transforming their education journey with ShikshaSetuvah.
           </p>
         </div>
         
