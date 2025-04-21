@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -12,7 +11,8 @@ import Programs from "./pages/Programs";
 import EduSaathi from "./pages/EduSaathi";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
-import BookCall from "./pages/BookCall";  // Add this import
+import BookCall from "./pages/BookCall";
+import Register from "./pages/Register";
 
 const queryClient = new QueryClient();
 
@@ -29,7 +29,8 @@ const App = () => (
           <Route path="/programs" element={<Programs />} />
           <Route path="/edusaathi" element={<EduSaathi />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/book-call" element={<BookCall />} />  {/* Add this route */}
+          <Route path="/register" element={<Register />} />
+          <Route path="/book-call" element={<BookCall />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
