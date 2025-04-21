@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { PhoneCall } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -21,12 +21,21 @@ const HeroSection = () => {
               Empowering rural India through accessible, multilingual education in regional languages. Learn at your own pace, earn rewards, and build your future with ShikshaSetuvah.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-up opacity-0 animation-delay-300">
-              <Button className="bg-bright-yellow hover:bg-amber-400 text-trust-blue font-semibold px-6 py-6 text-lg hover:scale-105 transition-all duration-300">
-                Start Learning Now
+              <Button 
+                asChild 
+                className="bg-bright-yellow hover:bg-amber-400 text-trust-blue font-semibold px-6 py-6 text-lg hover:scale-105 transition-all duration-300"
+              >
+                <Link to="/login">Start Learning Now</Link>
               </Button>
-              <Button variant="outline" className="border-trust-blue text-trust-blue hover:bg-trust-blue hover:text-white font-semibold px-6 py-6 text-lg hover:scale-105 transition-all duration-300">
-                <PhoneCall className="mr-2 h-5 w-5" />
-                Book a Call
+              <Button 
+                asChild 
+                variant="outline" 
+                className="border-trust-blue text-trust-blue hover:bg-trust-blue hover:text-white font-semibold px-6 py-6 text-lg hover:scale-105 transition-all duration-300"
+              >
+                <Link to="/book-call">
+                  <PhoneCall className="mr-2 h-5 w-5" />
+                  Book a Call
+                </Link>
               </Button>
             </div>
             <div className="mt-10 grid grid-cols-3 gap-4 animate-fade-up opacity-0 animation-delay-400">

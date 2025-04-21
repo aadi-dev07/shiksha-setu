@@ -25,7 +25,7 @@ const CTASection = () => {
               asChild
               className="bg-white hover:bg-gray-100 text-trust-blue font-semibold px-8 py-6 text-lg hover:scale-105 transition-all duration-300 border-2 border-bright-yellow"
             >
-              <Link to="/programs">Join Beta Program</Link>
+              <Link to="/programs">Join our Program</Link>
             </Button>
           </div>
         </div>
