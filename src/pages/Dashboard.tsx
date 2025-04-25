@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Book, Star, MessageCircle, ListTodo, Globe, BarChart2, PhoneCall, Circle } from 'lucide-react';
@@ -8,8 +7,8 @@ import { Progress } from "@/components/ui/progress";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from '@/hooks/use-toast';
 import { Link } from 'react-router-dom';
+import { UserButton } from "@clerk/clerk-react";
 
-// Mock data
 const studentData = {
   name: "Arjun Singh",
   progress: {
@@ -73,16 +72,26 @@ const Dashboard = () => {
                 : "अपनी सीखने की यात्रा जारी रखें"}
             </p>
           </motion.div>
-          <Select defaultValue={language} onValueChange={handleLanguageChange}>
-            <SelectTrigger className="w-[140px] bg-white/10 border-white/20 text-white">
-              <Globe className="mr-2 h-4 w-4" />
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="english">English</SelectItem>
-              <SelectItem value="hindi">हिंदी</SelectItem>
-            </SelectContent>
-          </Select>
+          <div className="flex items-center gap-4">
+            <Select defaultValue={language} onValueChange={handleLanguageChange}>
+              <SelectTrigger className="w-[140px] bg-white/10 border-white/20 text-white">
+                <Globe className="mr-2 h-4 w-4" />
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="english">English</SelectItem>
+                <SelectItem value="hindi">हिंदी</SelectItem>
+              </SelectContent>
+            </Select>
+            <UserButton 
+              afterSignOutUrl="/"
+              appearance={{
+                elements: {
+                  avatarBox: "w-10 h-10 rounded-full border-2 border-white hover:scale-105 transition-all duration-300"
+                }
+              }}
+            />
+          </div>
         </div>
       </div>
 

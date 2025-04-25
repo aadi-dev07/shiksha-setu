@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Home, Info, Book, MessageSquare, Mail, PhoneCall } from "lucide-react";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <nav className="bg-white py-4 px-6 shadow-md sticky top-0 z-50">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
-          {/* Logo */}
           <Link to="/" className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
             <div className="bg-trust-blue rounded-md p-1">
               <span className="text-white font-bold text-xl">S</span>
@@ -18,7 +19,6 @@ const Navbar = () => {
             <span className="font-bold text-trust-blue text-xl">ShikshaSetuvah</span>
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="flex items-center gap-1 text-trust-blue hover:text-bright-yellow transition-all duration-300">
               <Home size={18} />
@@ -41,10 +41,21 @@ const Navbar = () => {
               <span>Contact</span>
             </Link>
 
-            <div className="flex gap-4">
-              <Button asChild className="bg-bright-yellow hover:bg-amber-400 text-trust-blue font-semibold transition-all duration-300 hover:scale-105">
-                <Link to="/login">Start Learning</Link>
-              </Button>
+            <div className="flex gap-4 items-center">
+              <SignedOut>
+                <SignInButton mode="modal" redirectUrl="/dashboard">
+                  <Button className="bg-bright-yellow hover:bg-amber-400 text-trust-blue font-semibold transition-all duration-300 hover:scale-105">
+                    Start Learning
+                  </Button>
+                </SignInButton>
+              </SignedOut>
+              <SignedIn>
+                <Link to="/dashboard">
+                  <Button className="bg-bright-yellow hover:bg-amber-400 text-trust-blue font-semibold transition-all duration-300 hover:scale-105">
+                    Dashboard
+                  </Button>
+                </Link>
+              </SignedIn>
               <Button 
                 variant="outline" 
                 asChild
@@ -55,10 +66,21 @@ const Navbar = () => {
                   Book a Call
                 </Link>
               </Button>
+              <SignedIn>
+                <div className="flex justify-center">
+                  <UserButton 
+                    afterSignOutUrl="/"
+                    appearance={{
+                      elements: {
+                        avatarBox: "w-10 h-10 rounded-full border-2 border-trust-blue hover:scale-105 transition-all duration-300"
+                      }
+                    }}
+                  />
+                </div>
+              </SignedIn>
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -75,7 +97,6 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 py-4 space-y-4 flex flex-col">
             <Link to="/" className="flex items-center gap-2 text-trust-blue hover:text-bright-yellow transition-all duration-300">
@@ -98,9 +119,20 @@ const Navbar = () => {
               <Mail size={18} />
               <span>Contact</span>
             </Link>
-            <Button asChild className="bg-bright-yellow hover:bg-amber-400 text-trust-blue font-semibold w-full">
-              <Link to="/login">Start Learning</Link>
-            </Button>
+            <SignedOut>
+              <SignInButton mode="modal" redirectUrl="/dashboard">
+                <Button className="bg-bright-yellow hover:bg-amber-400 text-trust-blue font-semibold w-full">
+                  Start Learning
+                </Button>
+              </SignInButton>
+            </SignedOut>
+            <SignedIn>
+              <Link to="/dashboard">
+                <Button className="bg-bright-yellow hover:bg-amber-400 text-trust-blue font-semibold w-full">
+                  Dashboard
+                </Button>
+              </Link>
+            </SignedIn>
             <Button 
               variant="outline" 
               asChild
@@ -111,6 +143,18 @@ const Navbar = () => {
                 Book a Call
               </Link>
             </Button>
+            <SignedIn>
+              <div className="flex justify-center">
+                <UserButton 
+                  afterSignOutUrl="/"
+                  appearance={{
+                    elements: {
+                      avatarBox: "w-10 h-10 rounded-full border-2 border-trust-blue hover:scale-105 transition-all duration-300"
+                    }
+                  }}
+                />
+              </div>
+            </SignedIn>
           </div>
         )}
       </div>

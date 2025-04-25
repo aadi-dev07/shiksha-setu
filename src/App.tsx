@@ -4,7 +4,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { SignedIn, SignedOut } from "@clerk/clerk-react";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -30,10 +31,22 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/programs" element={<Programs />} />
           <Route path="/edusaathi" element={<EduSaathi />} />
+          <Route 
+            path="/dashboard" 
+            element={
+              <>
+                <SignedIn>
+                  <Dashboard />
+                </SignedIn>
+                <SignedOut>
+                  <Navigate to="/" replace />
+                </SignedOut>
+              </>
+            }
+          />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/book-call" element={<BookCall />} />
-          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
