@@ -1,22 +1,12 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Mail, Lock } from "lucide-react";
 import { motion } from "framer-motion";
-import { SignInButton, SignUpButton, useAuth } from "@clerk/clerk-react";
-import { useEffect } from "react";
 
 const Login = () => {
-  const { isSignedIn } = useAuth();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (isSignedIn) {
-      navigate('/dashboard');
-    }
-  }, [isSignedIn, navigate]);
-
   return (
     <div className="min-h-screen grid md:grid-cols-2 bg-gradient-to-br from-[#E5DEFF] to-white">
       {/* Left Side (or top on mobile) */}
@@ -49,12 +39,33 @@ const Login = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         <Card className="w-full max-w-md p-8 shadow-lg bg-white/80 backdrop-blur">
-          <div className="space-y-6">
-            <SignInButton mode="modal">
-              <Button className="w-full bg-trust-blue hover:bg-trust-blue/90 transition-all duration-300 hover:scale-[1.02]">
-                Sign In
-              </Button>
-            </SignInButton>
+          <form className="space-y-6">
+            <div className="space-y-2">
+              <div className="relative">
+                <Mail className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                <Input
+                  type="email"
+                  placeholder="Email or Mobile Number"
+                  className="pl-10"
+                />
+              </div>
+              <div className="relative">
+                <Lock className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+                <Input
+                  type="password"
+                  placeholder="Password"
+                  className="pl-10"
+                />
+              </div>
+            </div>
+            
+            <Link to="/forgot-password" className="text-sm text-trust-blue hover:underline block text-right">
+              Forgot Password?
+            </Link>
+
+            <Button className="w-full bg-trust-blue hover:bg-trust-blue/90 transition-all duration-300 hover:scale-[1.02]">
+              Continue Learning
+            </Button>
 
             <div className="relative my-6">
               <div className="absolute inset-0 flex items-center">
@@ -65,15 +76,20 @@ const Login = () => {
               </div>
             </div>
 
-            <SignUpButton mode="modal">
-              <Button 
-                variant="outline" 
-                className="w-full hover:scale-[1.02] transition-all duration-300"
-              >
-                Create Account
-              </Button>
-            </SignUpButton>
-          </div>
+            <Button 
+              variant="outline" 
+              className="w-full hover:scale-[1.02] transition-all duration-300"
+            >
+              Login with Google
+            </Button>
+
+            <p className="text-center text-sm text-gray-600">
+              New to ShikshaSetuvah?{" "}
+              <Link to="/register" className="text-trust-blue hover:underline font-medium">
+                Create your free account
+              </Link>
+            </p>
+          </form>
         </Card>
       </motion.div>
     </div>
